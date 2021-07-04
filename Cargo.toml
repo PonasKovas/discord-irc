@@ -1,0 +1,16 @@
+[package]
+name = "discord-irc"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+irc = "0.15"
+tokio = { version = "1.6", features = ["full"] }
+structopt = "0.3"
+lazy_static = "1.4"
+futures = "0.3"
+
+[dependencies.serenity]
+default-features = false
+features = ["builder", "cache", "client", "gateway", "http", "model", "utils", "rustls_backend"]
+version = "0.10"
