@@ -56,7 +56,7 @@ impl EventHandler for Handler {
             if let Some(sender) = self.irc_channels.read().await.get(&category_name) {
                 sender
                     .send_privmsg(
-                        format!("##{}", channel_name),
+                        format!("#{}", channel_name),
                         format!("{}: {}", msg.author.name, msg.content),
                     )
                     .unwrap();
